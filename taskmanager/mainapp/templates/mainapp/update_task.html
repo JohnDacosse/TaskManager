@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+</head>
+<body>
+    <form>
+        <p>Update Task</p>
+        {{ task.title }}<br/>
+        {{ task.description }}<br/>
+        {{ task.location }}<br/>
+        {{ task.startDate }}<br/>
+        {{ task.endDate }}<br/>
+        {{ task.status }}<br/>
+        {{ task.client }}<br/>
+        <select name="status" class="combo_status">
+            <option value="not_started">Pas commencée</option>
+            <option value="started">En cours</option>
+            <option value="finished">Terminée</option>
+        </select>
+        <input type="submit" name="Update Task">
+    </form>
+</body>
+</html>
