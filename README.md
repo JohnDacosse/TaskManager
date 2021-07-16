@@ -13,7 +13,7 @@ DATABASES = {
         'NAME': 'DBNAME',
         'HOST': 'localhost',
         'PORT': '3306',
-        'USER': 'admin',
+        'USER': 'USERNAME',
         'PASSWORD': 'PASSWORD',
     }
 }
@@ -28,4 +28,4 @@ Le nom d'utilisateur est **admin**
 Lancer le serveur :<br>À partir du répertoire **`TaskManager/taskmanager/`** exécuter la commande `$ python manage.py runserver`
 
 ## Étape 5
-Vérifier sur le **`http://127.0.0.1:8000//taskmanager/`** que tout fonctionne.
+Vérifier sur le **`http:/127.0.0.1:8000/taskmanager/`** que tout fonctionne.
