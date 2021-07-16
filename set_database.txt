@@ -1,0 +1,56 @@
+# ATTENTION : Ce fichier a juste pour but d'initialiser la DB pour le professeur.
+# Il ne doit en aucun cas n'être utilisé pour la mise en production.
+from django.contrib.auth.models import User
+from mainapp.models *
+
+# Création d'un technicien
+user1 = User.objects.create_user('john', 'john.technicien@email.be', 'azerty')
+user2 = User.objects.create_user('megan', 'megan.technicien@email.be', 'qwerty')
+
+user1.save()
+user2.save()
+
+# Création des clients
+client1 = Clients.objects.create('Roger Dumont', 'roger.dumont@email.be', '065 12 34 56', 'Employée section finance')
+client2 = Clients.objects.create('Caroline Staquet', 'caroline.staquet@email.be', '065 00 11 22', 'Employée section marketing')
+client3 = Clients.objects.create('Benjamin Libert', 'benjamin.libert@email.be', '065 58 42 71', 'Chef section finance')
+client4 = Clients.objects.create('Amandine Minom', 'amandine.minom@email.be', '065 78 56 12', 'Employée section informatique')
+
+client1.save()
+client2.save()
+client3.save()
+client4.save()
+
+# Création des status
+status1 = Status.objects.create('Pas commencée')
+status2 = Status.objects.create('En cours')
+status3 = Status.objects.create('Terminée')
+
+status1.save()
+status2.save()
+status3.save()
+
+# Création des tâches
+# Tâche en cours
+task1 = Tasks.objects.create('Ajout RAM', 'Ajouter 4Go de RAM sur le PC', 'Bâtiment des finances, local 12', '', '2021-11-15 14:21:07', '2021-11-25 12:00:00', 1, 1, 2)
+task2 = Tasks.objects.create('Problème serveur finance', 'Serveur souvent victime de crash, à dépanner', 'Bâtiment des finances, local 2', '', '2021-10-10 13:58:16', '2021-10-11 12:00:00', 3, 1, 2)
+task3 = Tasks.objects.create('Problème serveur finance', 'Serveur souvent victime de crash, à dépanner', 'Bâtiment des finances, local 2', '', '2021-10-10 13:58:16', '2021-10-11 12:00:00', 3, 1, 3)
+
+# Tâche en cours - RETARD
+task4 = Tasks.objects.create('Tâche en retard', 'Exemple d\'une tâche en retard', 'n/a', '', '1989-08-24 12:00:00', '1989-08-24 13:00:00', 3, 1, 2)
+
+# Commencée
+task5 = Tasks.objects.create('Remplacement écran', 'Ancien écran CRT à changer et reprendre', 'Bâtiment informatique, salle de formation', '', '2021-11-11 08:30:12', '2021-11-11 12:00:00', 4, 2, 2)
+
+# Commencée - RETARD
+task6 = Tasks.objects.create('Tâche en retard', 'Exemple d\'une tâche en retard', 'n/a', '', '1989-08-24 12:00:00', '1989-08-24 13:00:00', 1, 2, 2)
+
+# Terminée
+task6 = Tasks.objects.create('Oubli de mot de passe', 'Réinitialiser le mot de passe du client', 'À distance', 'Réinitialisé avec succès', '2021-07-12 09:11:28', '2021-07-12 09:30:00', 2, 3, 2)
+
+task1.save()
+task2.save()
+task3.save()
+task4.save()
+task5.save()
+task6.save()
