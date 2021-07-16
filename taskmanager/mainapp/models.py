@@ -1,16 +1,16 @@
 from datetime import datetime
 
-from django.db import models, migrations
+from django.contrib.auth.models import User
+from django.db import models
 
 
 # Table des utilisateurs
-class Users(models.Model):
-    username = models.CharField(max_length=200)
-    password = models.CharField(max_length=200)
+#class Users(models.Model):
+#    username = models.CharField(max_length=200)
+#    password = models.CharField(max_length=200)
 
-    def __str__(self):
-        return self.username
-
+#    def __str__(self):
+#        return self.username
 
 # Table des clients
 class Clients(models.Model):
@@ -41,7 +41,7 @@ class Tasks(models.Model):
     endDate = models.DateTimeField(blank=True, null=True)
     status = models.ForeignKey(Status, on_delete=models.CASCADE)
     client = models.ForeignKey(Clients, on_delete=models.CASCADE)
-    user = models.ForeignKey(Users, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.client.name + " | " + self.title
@@ -57,7 +57,7 @@ class Schedules(models.Model):
 
 # Table relationnelle Users <-> Schedules
 class UserSchedule(models.Model):
-    user = models.ForeignKey(Users, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     schedule = models.ForeignKey(Schedules, on_delete=models.CASCADE)
 
 

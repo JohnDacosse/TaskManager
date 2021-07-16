@@ -7,9 +7,9 @@ class ClientAdmin(admin.ModelAdmin):
     search_fields = ['name', 'email']
 
 
-class UserAdmin(admin.ModelAdmin):
-    list_display = ('username',)
-    search_fields = ['username']
+#class UserAdmin(admin.ModelAdmin):
+#    list_display = ('username',)
+#    search_fields = ['username']
 
 
 class TaskAdmin(admin.ModelAdmin):
@@ -33,7 +33,7 @@ class UserScheduleAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Clients, ClientAdmin)
-admin.site.register(Users, UserAdmin)
+#admin.site.register(Users, UserAdmin)
 admin.site.register(Tasks, TaskAdmin)
 admin.site.register(Schedules, ScheduleAdmin)
 # admin.site.register(Status)
