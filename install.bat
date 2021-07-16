@@ -8,7 +8,9 @@ cd ./taskmanager/
 python manage.py migrate
 
 echo "## Création de l'administrateur DB"
-python manage.py createsuperuser
+python manage.py createsuperuser --username admin --email admin@email.be
 
 echo "## Insertions DataBase"
 python manage.py shell < ../set_database.txt
+
+pause
