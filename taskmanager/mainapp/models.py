@@ -53,12 +53,7 @@ class Schedules(models.Model):
     description = models.CharField(max_length=500)
     startDate = models.DateTimeField()
     endDate = models.DateTimeField(blank=True, null=True)
-
-
-# Table relationnelle Users <-> Schedules
-class UserSchedule(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    schedule = models.ForeignKey(Schedules, on_delete=models.CASCADE)
+    user = models.ManyToManyField(User)
 
 
 
