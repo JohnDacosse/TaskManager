@@ -1,7 +1,7 @@
 # ATTENTION : Ce fichier a juste pour but d'initialiser la DB pour le professeur.
 # Il ne doit en aucun cas n'être utilisé pour la mise en production.
 from django.contrib.auth.models import User
-from mainapp.models *
+from mainapp.models import *
 
 # Création d'un technicien
 user1 = User.objects.create_user('john', 'john.technicien@email.be', 'azerty')
