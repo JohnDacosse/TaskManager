@@ -1,0 +1,19 @@
+/*
+Darker : #202225
+Dark : #2f3136
+Dark-Light: #36393f
+Dark-Lighter : #40444b
+Text : #e8e8e9
+*/
+
+body
+{
+    background-color: #2f3136;
+    margin: 0px;
+}
+
+h1, p, li
+{
+    color : #e8e8e9;
+}
+
