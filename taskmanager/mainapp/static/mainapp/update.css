@@ -9,11 +9,60 @@ Text : #e8e8e9
 body
 {
     background-color: #2f3136;
-    margin: 0px;
+    margin-left: 10em;
+    margin-right: 10em;
+    color: #e8e8e9;
+    font-weight: bold;
 }
 
-h1, p, li
+#main
 {
-    color : #e8e8e9;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
+#description, #location, #note
+{
+    height: 10em;
+    padding: 1em;
+    background-color: #40444b;
+    overflow-y:scroll;
+    width: 100%
+}
+
+#left
+{
+    width: 60%;
+}
+
+#right
+{
+    line-height: 0.5;
+    margin-left: 10em;
+    margin-top: 10em;
+    width: 40%;
+}
+
+#info
+{
+    font-size: 1.2em;
+}
+
+#date-picker
+{
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    width: 25%;
+}
+
+#labend
+{
+    margin-top: 1em;
+}
+
+#planif, #status
+{
+    margin-top: 6em;
+}

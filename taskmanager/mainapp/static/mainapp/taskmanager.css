@@ -6,21 +6,26 @@ Dark-Lighter : #40444b
 Text : #e8e8e9
 */
 
+/*
+Trello :
+gris: #e8e8e9
+blanc: #ffffff
+*/
+
 /* ---------- Général ---------- */
 html, body
 {
     height: 100%;
+    font-family: "Varela Round";
+    color: #e8e8e9
 }
 
 body
 {
-    background-color: #2f3136;
+    /*background-color: #2f3136;*/
+    background-image: url("./images/nor2.jpg");
+    background-size: cover;
     margin: 0px;
-}
-
-p, li
-{
-    color : #e8e8e9;
 }
 
 
@@ -36,10 +41,15 @@ p, li
 /* ---------- header ---------- */
 #header
 {
-    background-color: #202225;
+    background-color: rgba(12.5, 13.3, 14.5, 0.4);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+#header p
+{
+    color: #e8e8e9;
 }
 
 #search_zone
@@ -58,6 +68,7 @@ p, li
 #search_zone input {
     padding: 6px;
     border: 2px solid #e8e8e9;
+    border-radius: 40px;
     font-size: 1em;
     background-color : #40444b;
     height: 1em;
@@ -65,7 +76,7 @@ p, li
     color : #e8e8e9;
     margin-top: 1em;
     margin-left: 2em;
-}
+}t'es déjà s
 
 #param_zone
 {
@@ -82,26 +93,37 @@ p, li
 
 #info
 {
-    background-image: url(./images/info.png);
+    background-image: url(./images/info_light.png);
 }
 
 #info:hover
 {
-    background-image: url(./images/info_light.png);
+    background-image: url(./images/info.png);
 }
 
 
 #gear
 {
-    background-image: url(./images/gear.png);
+    background-image: url(./images/gear_light.png);
 }
 
 #gear:hover
 {
-    background-image: url(./images/gear_light.png);
+    background-image: url(./images/gear.png);
 }
 
 /* ---------- Main ---------- */
+@keyframes scale-up {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+}
+
 #tasks
 {
     display: flex;
@@ -111,11 +133,21 @@ p, li
     height: 85%;
 }
 
+.task-title
+{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
 .tasks
 {
     width: 33%;
-    background-color : #40444b;
+    background-color : rgba(25.1, 26.7, 29.4, 0.9);
     overflow-y:scroll;
+    border-radius: 0.5rem;
+    border-left: 0 solid #00ff99;
+    transition: border-left 300ms ease-in-out, padding-left 300ms ease-in-out;
 }
 
 .space
@@ -126,7 +158,9 @@ p, li
 .task
 {
     height: 6em;
-    background-color: #202225;
+    background-color: #2f3136;
+    border: solid 1px black;
+    border-radius: 10px;
     padding-right: 1em;
     padding-left: 1em;
     margin: 1em;
@@ -134,8 +168,18 @@ p, li
 
 .task:hover
 {
-    background-color: #2f3136;
+	animation: scale-up 0.4s both;
+	padding-left: 0.5rem;
+	border-left: 0.5rem solid #0bc4e0;
 
+}
+
+.task > :first-child {
+  margin-top: 0;
+}
+
+.task > :last-child {
+  margin-bottom: 0;
 }
 
 .task div

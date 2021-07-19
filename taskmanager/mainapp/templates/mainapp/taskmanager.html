@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Task Manager</title>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'mainapp/taskmanager.css' %}">
 </head>
@@ -20,6 +21,7 @@
 
     <div id="tasks">
         <section class="tasks">
+            <p class="task-title">Pas commencées</p>
             {% if tasks_not_started %}
                 {% for task in tasks_not_started %}
                     <article class="task" onclick="location.href='{% url 'update_task' task.id %}'">
@@ -41,6 +43,7 @@
         <span class="space"></span>
 
         <section class="tasks">
+            <p class="task-title">En cours</p>
             {% if tasks_started %}
                 {% for task in tasks_started %}
                     <article class="task">
@@ -62,6 +65,7 @@
         <span class="space"></span>
 
         <section class="tasks">
+            <p class="task-title">Terminées</p>
             {% if tasks_finished %}
                 {% for task in tasks_finished %}
                     <article class="task">
