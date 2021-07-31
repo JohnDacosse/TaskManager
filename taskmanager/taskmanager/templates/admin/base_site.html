@@ -1,0 +1,25 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+
+{% block branding %}
+    <h1>Helpdesk - Administration</h1>
+{% endblock %}
+
+{% block extrastyle %}
+<style>
+    #header
+    {
+        background-color: #202225;
+    }
+
+    #branding h1
+    {
+        font-weight: bold;
+    }
+
+    .breadcrumbs, body caption, #changelist-filter h2, .default
+    {
+        background: #2f3136 !important;
+    }
+</style>
+{% endblock %}

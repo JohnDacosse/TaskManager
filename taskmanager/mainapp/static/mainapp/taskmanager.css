@@ -6,12 +6,6 @@ Dark-Lighter : #40444b
 Text : #e8e8e9
 */
 
-/*
-Trello :
-gris: #e8e8e9
-blanc: #ffffff
-*/
-
 /* ---------- Général ---------- */
 html, body
 {
@@ -68,7 +62,7 @@ body
 #search_zone input {
     padding: 6px;
     border: 2px solid #e8e8e9;
-    border-radius: 40px;
+    border-radius: 2px;
     font-size: 1em;
     background-color : #40444b;
     height: 1em;
@@ -76,7 +70,7 @@ body
     color : #e8e8e9;
     margin-top: 1em;
     margin-left: 2em;
-}t'es déjà s
+}
 
 #param_zone
 {

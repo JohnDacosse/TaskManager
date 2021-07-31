@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'mainapp/index.css' %}">
+</head>
+<body>
+    <div id="header">
+        <h1>Sur quelle plateforme souhaitez vous vous rendre ?</h1>
+    </div>
+    <div id="main">
+        <div class="choice" id="helpdesk" onclick="location.href='/admin-helpdesk'">
+            <h1>Helpdesk</h1>
+        </div>
+        <div class="choice" id="taskmanager" onclick="location.href='{% url 'taskmanager'%}'">
+            <h1>Taskmanager</h1>
+        </div>
+    </div>
+    <footer id="info">
+        <p>Pour un meilleur confort, utilisez la WebApplication en plein écran.</p>
+    </footer>
+
+</body>
+</html>

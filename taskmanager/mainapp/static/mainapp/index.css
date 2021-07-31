@@ -1,0 +1,87 @@
+/*
+Darker : #202225
+Dark : #2f3136
+Dark-Light: #36393f
+Dark-Lighter : #40444b
+Text : #e8e8e9
+*/
+
+@keyframes scale-up-center {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+    background-color: #e8e8e9;
+    color: #202225;
+  }
+}
+
+body
+{
+    font-family: "Varela Round";
+    color: #e8e8e9;
+    background-image: url("./images/background.jpg");
+    background-size: cover;
+    margin: 0px;
+}
+
+#info
+{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 2em;
+    position:absolute;
+    bottom:0;
+    width: 100%;
+}
+
+#info p
+{
+    margin: 0px;
+    margin-top: 0.3em;
+    text-align: center;
+}
+
+#header
+{
+    margin-top: 10em;
+    text-align: center;
+}
+
+#main
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.choice
+{
+    margin: 10em;
+    width: 30%;
+    background-color: #202225;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.choice:hover
+{
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+#helpdesk
+{
+}
+
+#helpdesk h1
+{
+}
+
+#taskmanager
+{
+
+}
+
+#taskmanager h1
+{
+}

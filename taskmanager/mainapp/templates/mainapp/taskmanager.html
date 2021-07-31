@@ -26,7 +26,7 @@
                 {% for task in tasks_not_started %}
                     <article class="task" onclick="location.href='{% url 'update_task' task.id %}'">
                         <div>
-                            <p>{{ task.client }}</p>
+                            <p>{{ task.customer }}</p>
                             <p>{{ task.startDate }}</p>
                         </div>
                         <div>
@@ -46,9 +46,9 @@
             <p class="task-title">En cours</p>
             {% if tasks_started %}
                 {% for task in tasks_started %}
-                    <article class="task">
+                    <article class="task" onclick="location.href='{% url 'update_task' task.id %}'">
                         <div>
-                            <p>{{ task.client }}</p>
+                            <p>{{ task.customer }}</p>
                             <p>{{ task.startDate }}</p>
                         </div>
                         <div>
@@ -68,9 +68,9 @@
             <p class="task-title">Terminées</p>
             {% if tasks_finished %}
                 {% for task in tasks_finished %}
-                    <article class="task">
+                    <article class="task" onclick="location.href='{% url 'update_task' task.id %}'">
                         <div>
-                            <p>{{ task.client }}</p>
+                            <p>{{ task.customer }}</p>
                             <p>{{ task.startDate }}</p>
                         </div>
                         <p>{{ task.title }}</p>

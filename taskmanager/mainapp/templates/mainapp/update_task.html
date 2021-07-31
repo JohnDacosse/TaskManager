@@ -10,7 +10,7 @@
     <form>
         <div id="main">
             <div id="left">
-                <h1>{{ task.client }} | {{ task.title }}</h1>
+                <h1>{{ task.customer }} | {{ task.title }}</h1>
                 <p>Description :</p>
                 <div id="description">{{ task.description }}</div>
                 <p>Lieu :</p>
@@ -26,10 +26,10 @@
             </div>
             <div id="right">
                 <div id="info">
-                    <p>{{ client.name }}</p>
-                    <p>{{ client.profession }}</p>
-                    <p>{{ client.email }}</p>
-                    <p>{{ client.phone }}</p>
+                    <p>{{ customer.name }}</p>
+                    <p>{{ customer.profession }}</p>
+                    <p>{{ customer.email }}</p>
+                    <p>{{ customer.phone }}</p>
                 </div>
                 <p id="planif">Planification :</p>
                 <div id="date-picker">
