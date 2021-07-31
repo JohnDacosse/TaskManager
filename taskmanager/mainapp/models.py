@@ -35,10 +35,10 @@ class Task(models.Model):
     title = models.CharField(max_length=50)
     description = models.CharField(max_length=1000)
     location = models.CharField(max_length=500)
-    note = models.CharField(max_length=1000, blank=True)
+    note = models.TextField(max_length=1000, blank=True)
     startDate = models.DateTimeField(default=datetime.now)
     endDate = models.DateTimeField(blank=True, null=True)
-    status = models.ForeignKey(Status, on_delete=models.CASCADE)
+    status = models.ForeignKey(Status, on_delete=models.CASCADE, blank=False, null=False)
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 

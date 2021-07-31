@@ -3,50 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Update</title>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'mainapp/update.css' %}">
 </head>
 <body>
-    <form>
-        <div id="main">
-            <div id="left">
-                <h1>{{ task.customer }} | {{ task.title }}</h1>
-                <p>Description :</p>
-                <div id="description">{{ task.description }}</div>
-                <p>Lieu :</p>
-                <div id="location">{{ task.location }}</div>
-                <p>Notes :</p>
-                <form action="/action_page.php" id="usrform">
-                </form>
-                <textarea id="note" name="comment" form="usrform">{{ task.note }}</textarea>
-                <div id="buttons">
-                    <input class="btn" type="button" value="Confirmer">
-                    <input class="btn" type="button" value="Annuler" onclick="location.href='{% url 'taskmanager' %}'">
-                </div>
-            </div>
-            <div id="right">
-                <div id="info">
-                    <p>{{ customer.name }}</p>
-                    <p>{{ customer.profession }}</p>
-                    <p>{{ customer.email }}</p>
-                    <p>{{ customer.phone }}</p>
-                </div>
-                <p id="planif">Planification :</p>
-                <div id="date-picker">
-                    <label for="start">Du :</label>
-                    <input type="date" id="start" name="trip-start">
-
-                    <label id="labend" for="end">Au :</label>
-                    <input type="date" id="end" name="trip-end">
-                </div>
-                <p id="status">Status :</p>
-                <select name="status" class="combo_status">
-                    <option value="not_started">Pas commencée</option>
-                    <option value="started">En cours</option>
-                    <option value="finished">Terminée</option>
-                </select>
-            </div>
+    <div id="title">
+        <h1>{{ customer.name }} | {{ customer.profession }}</h1>
+    </div>
+    <div id="main">
+        <div id="customer">
+            <h2>Informations client :</h2>
+            <p>{{ customer.name }}</p>
+            <p>{{ customer.email }}</p>
+            <p>{{ customer.phone }}</p>
+            <h2>Lieu:</h2>
+            <p>{{ task.location }}</p>
         </div>
-    </form>
+        <div id="task">
+            <h2>Tâche :</h2>
+            <p>{{ task.description }}</p>
+            <p>Demandée le {{ task.startDate }}</p>
+            <p>À finir avant le {{ task.endDate }}</p>
+
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Enregistrer">
+                <input type="button" value="annuler" onclick="location.href='{% url 'taskmanager'%}'">
+            </form>
+        </div>
+    </div>
 </body>
 </html>
