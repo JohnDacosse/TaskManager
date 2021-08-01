@@ -3,7 +3,6 @@ from django.contrib.auth.decorators import login_required
 from .models import Task, Customer
 from datetime import date
 from .forms import UpdateTaskForm
-from django.contrib.auth.models import User
 
 
 @login_required
