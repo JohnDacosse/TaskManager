@@ -32,21 +32,21 @@ status3.save()
 
 # Création des tâches
 # Tâche en cours
-task1 = Task.objects.create(title='Ajout RAM', description='Ajouter 4Go de RAM sur le PC', location='Bâtiment des finances, local 12', note='', startDate='2021-11-15 14:21:07', endDate='2021-11-25 12:00:00', status_id=1, client_id=1, user_id=2)
-task2 = Task.objects.create(title='Problème serveur finance', description='Serveur souvent victime de crash, à dépanner', location='Bâtiment des finances, local 2', note='', startDate='2021-10-10 13:58:16', endDate='2021-10-11 12:00:00', status_id=1, client_id=3, user_id=2)
-task3 = Task.objects.create(title='Problème serveur finance', description='Serveur souvent victime de crash, à dépanner', location='Bâtiment des finances, local 2', note='', startDate='2021-10-10 13:58:16', endDate='2021-10-11 12:00:00', status_id=1, client_id=3, user_id=3)
+task1 = Task.objects.create(title='Ajout RAM', description='Ajouter 4Go de RAM sur le PC', location='Bâtiment des finances, local 12', note='', startDate='2021-11-15 14:21:07', endDate='2021-11-25 12:00:00', status_id=1, customer_id=1, user_id=2)
+task2 = Task.objects.create(title='Problème serveur finance', description='Serveur souvent victime de crash, à dépanner', location='Bâtiment des finances, local 2', note='', startDate='2021-10-10 13:58:16', endDate='2021-10-11 12:00:00', status_id=1, customer_id=3, user_id=2)
+task3 = Task.objects.create(title='Problème serveur finance', description='Serveur souvent victime de crash, à dépanner', location='Bâtiment des finances, local 2', note='', startDate='2021-10-10 13:58:16', endDate='2021-10-11 12:00:00', status_id=1, customer_id=3, user_id=3)
 
 # Tâche en cours - RETARD
-task4 = Task.objects.create(title='Tâche en retard', description='Exemple d\'une tâche en retard', location='n/a', note='', startDate='1989-08-24 12:00:00', endDate='1989-08-24 13:00:00', status_id=1, client_id=3, user_id=2)
+task4 = Task.objects.create(title='Tâche en retard', description='Exemple d\'une tâche en retard', location='n/a', note='', startDate='1989-08-24 12:00:00', endDate='1989-08-24 13:00:00', status_id=1, customer_id=3, user_id=2)
 
 # Commencée
-task5 = Task.objects.create(title='Remplacement écran', description='Ancien écran CRT à changer et reprendre', location='Bâtiment informatique, salle de formation', note='', startDate='2021-11-11 08:30:12', endDate='2021-11-11 12:00:00', status_id=2, client_id=4, user_id=2)
+task5 = Task.objects.create(title='Remplacement écran', description='Ancien écran CRT à changer et reprendre', location='Bâtiment informatique, salle de formation', note='', startDate='2021-11-11 08:30:12', endDate='2021-11-11 12:00:00', status_id=2, customer_id=4, user_id=2)
 
 # Commencée - RETARD
-task6 = Task.objects.create(title='Tâche en retard', description='Exemple d\'une tâche en retard', location='n/a', note='', startDate='1989-08-24 12:00:00', endDate='1989-08-24 13:00:00', status_id=2, client_id=3, user_id=2)
+task6 = Task.objects.create(title='Tâche en retard', description='Exemple d\'une tâche en retard', location='n/a', note='', startDate='1989-08-24 12:00:00', endDate='1989-08-24 13:00:00', status_id=2, customer_id=3, user_id=2)
 
 # Terminée
-task7 = Task.objects.create(title='Oubli de mot de passe', description='Réinitialiser le mot de passe du client', location='À distance', note='Réinitialisé avec succès', startDate='2021-07-12 09:11:28', endDate='2021-07-12 09:30:00', status_id=3, client_id=2, user_id=2)
+task7 = Task.objects.create(title='Oubli de mot de passe', description='Réinitialiser le mot de passe du client', location='À distance', note='Réinitialisé avec succès', startDate='2021-07-12 09:11:28', endDate='2021-07-12 09:30:00', status_id=3, customer_id=2, user_id=2)
 
 task1.save()
 task2.save()
