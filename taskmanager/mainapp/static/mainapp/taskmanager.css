@@ -72,6 +72,27 @@ body
     margin-left: 2em;
 }
 
+#logout
+{
+    color: #e8e8e9;
+    background-color: #202225;
+    border-radius: 10px;
+    height: 50%;
+    width: 10em;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+}
+
+#logout:hover
+{
+    color: black;
+    background-color: #e8e8e9;
+    border: 3px solid #2f3136;
+}
+
 #param_zone
 {
     display: flex;

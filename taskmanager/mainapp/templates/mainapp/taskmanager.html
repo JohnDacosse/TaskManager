@@ -10,10 +10,11 @@
 <body>
     <header id="header">
         <div id="search_zone">
-            <p onclick="location.href='{% url 'index' %}'">Task Manager</p>
+            <p onclick="location.href='{% url 'index' %}'">Task Manager {{ current_user.username }}</p>
             <input type="text" placeholder="Rechercher">
         </div>
         <div id="param_zone">
+            <button id="logout" onclick="location.href='{% url 'logout' %}'">Déconnexion</button>
             <div id="info" class="picto"></div>
             <div id="gear" class="picto"></div>
         </div>

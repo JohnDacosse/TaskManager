@@ -3,14 +3,16 @@ from django.contrib.auth.decorators import login_required
 from .models import Task, Customer
 from datetime import date
 from .forms import UpdateTaskForm
+from django.contrib.auth.models import User
 
 
 @login_required
 def taskmanager(request):
+    current_user_id = request.user
     tasks = Task.objects.all()
-    tasks_not_started = Task.objects.filter(status=1)
-    tasks_started = Task.objects.filter(status=2)
-    tasks_finished = Task.objects.filter(status=3)
+    tasks_not_started = Task.objects.filter(status=1, user=current_user_id)
+    tasks_started = Task.objects.filter(status=2, user=current_user_id)
+    tasks_finished = Task.objects.filter(status=3, user=current_user_id)
     today = date.today()
     context = {
         'tasks': tasks,
