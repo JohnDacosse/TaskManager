@@ -30,12 +30,6 @@ DEBUG = env.bool("DEBUG", False)
 
 ALLOWED_HOSTS = env.list("ALLOWED_HOSTS")
 
-print(SECRET_KEY)
-print(DEBUG)
-print(type(DEBUG))
-print(ALLOWED_HOSTS)
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -139,4 +133,4 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = '/taskmanager/'
-LOGOUT_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/logged-out/'

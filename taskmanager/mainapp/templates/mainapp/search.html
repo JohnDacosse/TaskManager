@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Recherche</title>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'mainapp/search.css' %}">
+</head>
+<body>
+    {% csrf_token %}
+    <header>
+        <form method="POST" action="{% url 'search' %}">
+            {% csrf_token %}
+            <input id="search-bar" type="text" placeholder="Rechercher par client" name="searched">
+        </form>
+        <button id="back" onclick="location.href='{% url 'taskmanager' %}'">Retour</button>
+    </header>
+    {% if tasks_searched %}
+        {% for item in tasks_searched %}
+            {% for task in item %}
+                <article class="task" onclick="location.href='{% url 'update_task' task.id %}'">
+                    <p>{{ task.customer }}</p>
+                    <p>{{ task.title }}</p>
+                    <p>{{ task.startDate }}</p>
+                    <p>{{ task.endDate }}</p>
+                    <p>{{ task.status }}</p>
+                </article>
+            {% endfor %}
+        {% endfor %}
+    {% else %}
+        <p id="err">Aucun nom ne correspond à votre recherche</p>
+    {% endif %}
+</body>
+</html>

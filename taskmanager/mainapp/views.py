@@ -41,9 +41,24 @@ def update_task(request, pk):
     return render(request, 'mainapp/update_task.html', context)
 
 
-def connection(request):
-    return render(request, 'mainapp/connection.html')
-
-
 def index(request):
     return render(request, 'mainapp/index.html')
+
+
+def logged_out(request):
+    return render(request, 'mainapp/logout.html')
+
+
+@login_required
+def search(request):
+    if request.method == "POST":
+        searched = request.POST['searched']
+        current_user_id = request.user
+        customers = Customer.objects.filter(name__icontains=searched)
+        print(customers)
+        tasks_searched = []
+        for customer in customers:
+            tasks_searched.append(Task.objects.filter(customer_id=customer.id, user=current_user_id))
+        return render(request, 'mainapp/search.html', {'tasks_searched': tasks_searched})
+    else:
+        return render(request, 'mainapp/search.html', {})

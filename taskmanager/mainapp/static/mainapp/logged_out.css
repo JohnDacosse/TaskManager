@@ -1,0 +1,26 @@
+/*
+Darker : #202225
+Dark : #2f3136
+Dark-Light: #36393f
+Dark-Lighter : #40444b
+Text : #e8e8e9
+*/
+
+body
+{
+    font-family: "Varela Round";
+    color: #e8e8e9;
+    background : #2f3136;
+}
+
+#main
+{
+    text-align: center;
+    width: 70%;
+    height: 10em;
+    background-color: #202225;
+    margin: auto;
+    padding-top: 3em;
+    border-radius: 20px;
+    font-size: 2em;
+}

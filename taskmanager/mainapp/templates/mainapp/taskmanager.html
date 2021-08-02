@@ -11,12 +11,34 @@
     <header id="header">
         <div id="search_zone">
             <p onclick="location.href='{% url 'index' %}'">Task Manager {{ current_user.username }}</p>
-            <input type="text" placeholder="Rechercher">
+            <form method="POST" action="{% url 'search' %}">
+                {% csrf_token %}
+                <input type="text" placeholder="Rechercher par client" name="searched">
+            </form>
         </div>
         <div id="param_zone">
             <button id="logout" onclick="location.href='{% url 'logout' %}'">Déconnexion</button>
-            <div id="info" class="picto"></div>
-            <div id="gear" class="picto"></div>
+            <script>
+                let cbg = true;
+                function info() {
+                    alert("Cliquez sur une tâche pour la consulter, modifier les notes éventuelles,"
+                    +" ou modififier le status de la tâche.\n\n"
+                    +"La barre de recherche vous permet de rechercher une tâche via le nom du client.\n\n"
+                    +"Un symbole / ! \\ sur une tâche indique un retard.");
+                }
+
+                function param() {
+                    cbg = !cbg;
+                    if(cbg === true) {
+                        document.body.style.backgroundImage = "url('../../static/mainapp/images/norway.jpg')";
+                    } else {
+                        document.body.style.backgroundImage = "url('../../static/mainapp/images/nor2.jpg')";
+                    }
+                    console.log(cbg);
+                }
+            </script>
+            <div id="info" class="picto" onclick="info()"></div>
+            <div id="gear" class="picto" onclick="param()"></div>
         </div>
     </header>
 
@@ -80,5 +102,8 @@
             {% endif %}
         </section>
     </div>
+    <footer id="footer">
+        <p>Pour un meilleur confort d'utilisation, utilisez l'application en plein écran.</p>
+    </footer>
 </body>
 </html>

@@ -16,8 +16,7 @@ html, body
 
 body
 {
-    /*background-color: #2f3136;*/
-    background-image: url("./images/nor2.jpg");
+    background-image: url("./images/norway.jpg");
     background-size: cover;
     margin: 0px;
 }
@@ -91,6 +90,7 @@ body
     color: black;
     background-color: #e8e8e9;
     border: 3px solid #2f3136;
+    cursor: pointer;
 }
 
 #param_zone
@@ -114,6 +114,7 @@ body
 #info:hover
 {
     background-image: url(./images/info.png);
+    cursor: pointer;
 }
 
 
@@ -125,6 +126,7 @@ body
 #gear:hover
 {
     background-image: url(./images/gear.png);
+    cursor: pointer;
 }
 
 /* ---------- Main ---------- */
@@ -186,6 +188,7 @@ body
 	animation: scale-up 0.4s both;
 	padding-left: 0.5rem;
 	border-left: 0.5rem solid #0bc4e0;
+	cursor: pointer;
 
 }
 
@@ -208,6 +211,22 @@ body
 {
     height: 2em;
     width: 10em;
+}
+
+#footer
+{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 2em;
+    position:absolute;
+    bottom:0;
+    width: 100%;
+}
+
+#footer p
+{
+    margin: 0px;
+    margin-top: 0.3em;
+    text-align: center;
 }
 
 /* ---------- Scrollbars ---------- */
