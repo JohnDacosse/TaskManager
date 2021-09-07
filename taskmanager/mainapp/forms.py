@@ -1,7 +1,7 @@
 from django import forms
 from .models import Task
 
-
+# Liaison des formulaires au modèle
 class UpdateTaskForm(forms.ModelForm):
     class Meta:
         model = Task

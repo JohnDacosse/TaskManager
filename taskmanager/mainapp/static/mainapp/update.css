@@ -6,6 +6,7 @@ Dark-Lighter : #40444b
 Text : #e8e8e9
 */
 
+/* -------- Général -------- */
 body
 {
     background-color: #40444b;
@@ -18,6 +19,23 @@ body
     background-size: cover;
 }
 
+h2
+{
+    color: #e8c14d;
+}
+
+form textarea
+{
+    resize: none;
+    width: 100%;
+}
+
+select, input
+{
+    cursor: pointer;
+}
+
+/* -------- Identifiants -------- */
 #title
 {
     background-color: #202225;
@@ -29,11 +47,6 @@ body
 #title h1
 {
     padding-top: 0.6em;
-    color: #e8c14d;
-}
-
-h2
-{
     color: #e8c14d;
 }
 
@@ -50,16 +63,5 @@ h2
 #customer, #task
 {
     width: 40%;
-}
-
-form textarea
-{
-    resize: none;
-    width: 100%;
-}
-
-select, input
-{
-    cursor: pointer;
 }
 

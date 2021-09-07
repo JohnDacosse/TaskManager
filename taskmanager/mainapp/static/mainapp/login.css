@@ -6,6 +6,7 @@ Dark-Lighter : #40444b
 Text : #e8e8e9
 */
 
+/* -------- Général -------- */
 body
 {
     font-family: "Varela Round";
@@ -15,6 +16,15 @@ body
     margin: 0px;
 }
 
+form ul
+{
+    color: #ff7a6b;
+    font-size: 20px !important;
+    list-style-type: none !important;
+
+}
+
+/* -------- Identifiants -------- */
 #decoration
 {
     margin: auto;
@@ -55,17 +65,11 @@ body
     border-radius: 5px;
 }
 
+/* -------- Classes -------- */
+
 .button
 {
     color: #e8e8e9 !important;
     background-color: #202225 !important;
     cursor: pointer;
-}
-
-form ul
-{
-    color: #ff7a6b;
-    font-size: 20px !important;
-    list-style-type: none !important;
-
 }

@@ -6,6 +6,7 @@ Dark-Lighter : #40444b
 Text : #e8e8e9
 */
 
+/* -------- Animation -------- */
 @keyframes scale-up-center {
   0% {
     transform: scale(1);
@@ -26,6 +27,7 @@ body
     margin: 0px;
 }
 
+/* -------- Identifiants -------- */
 #info
 {
     background-color: rgba(0, 0, 0, 0.5);
@@ -55,6 +57,7 @@ body
     justify-content: space-around;
 }
 
+/* -------- Classes -------- */
 .choice
 {
     margin: 10em;

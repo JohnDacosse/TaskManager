@@ -5,6 +5,7 @@ from datetime import date
 from .forms import UpdateTaskForm
 
 
+# Page principale de l'application
 @login_required
 def taskmanager(request):
     current_user_id = request.user
@@ -23,6 +24,7 @@ def taskmanager(request):
     return render(request, 'mainapp/taskmanager.html', context)
 
 
+# Page de modification d'une tâche
 @login_required
 def update_task(request, pk):
     task = get_object_or_404(Task, pk=pk)
@@ -41,14 +43,17 @@ def update_task(request, pk):
     return render(request, 'mainapp/update_task.html', context)
 
 
+# Page d'index
 def index(request):
     return render(request, 'mainapp/index.html')
 
 
+# Page de déconnexion
 def logged_out(request):
     return render(request, 'mainapp/logout.html')
 
 
+# Page de recherche d'un ou plusieurs clients
 @login_required
 def search(request):
     if request.method == "POST":

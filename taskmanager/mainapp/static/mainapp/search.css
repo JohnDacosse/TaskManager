@@ -6,13 +6,7 @@ Dark-Lighter : #40444b
 Text : #e8e8e9
 */
 
-body
-{
-    font-family: "Varela Round";
-    color: #e8e8e9;
-    background-color: #202225;
-}
-
+/* -------- Animation -------- */
 @keyframes scale-up-center {
   0% {
     transform: scale(1);
@@ -22,6 +16,14 @@ body
   }
 }
 
+/* -------- Général -------- */
+body
+{
+    font-family: "Varela Round";
+    color: #e8e8e9;
+    background-color: #202225;
+}
+
 header
 {
     display: flex;
@@ -29,6 +31,8 @@ header
     justify-content: space-between;
 }
 
+
+/* -------- Identifiants -------- */
 #back
 {
     color: #e8e8e9;
@@ -65,6 +69,14 @@ header
     margin-left: 1em;
 }
 
+#err
+{
+    margin-top: 5em;
+    text-align: center;
+    font-size: 3em;
+}
+
+/* -------- Classes -------- */
 .task
 {
     display: flex;
@@ -91,11 +103,4 @@ header
 	padding-left: 0.5rem;
 	border-left: 0.5rem solid #0bc4e0;
 	cursor: pointer;
-}
-
-#err
-{
-    margin-top: 5em;
-    text-align: center;
-    font-size: 3em;
 }
